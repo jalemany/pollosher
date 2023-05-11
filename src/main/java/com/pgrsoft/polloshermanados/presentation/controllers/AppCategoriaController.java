@@ -18,8 +18,10 @@ public class AppCategoriaController {
 	@GetMapping("/app/categorias")
 	public String getPaginaCategorias() {
 		
+		List<Categoria> categorias = categoriaServices.getAll();
 		
-		
+		System.out.println(categorias);
+	
 		return "categorias";
 	}
 	
