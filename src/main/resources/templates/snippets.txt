@@ -1,4 +1,0 @@
-<tr th:each="categoria: ${categorias}">
-			<td>CODIGO</td>
-			<td>NOMBRE</td>
-    	</tr>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Pollos Hermanados</title>
+</head>
+<body>
+	<h1 th:text="'Pedido ' + ${pedido.codigo}">Pedido 6561</h1>
+	
+	<p>Código: <span th:text="${pedido.codigo}">3455</span></p>
+	<p>Fecha: <span th:text="${#dates.format(pedido.fecha,'dd/MM/yyyy')}">12/03/2020</span></p>
+	<p>Hora: <span th:text="${#dates.format(pedido.fecha,'HH:mm')}">09:54</span></p>
+	<p>Camarero: <span th:text="${pedido.camarero.nombre + ' ' + pedido.camarero.apellido1 + ' ' + pedido.camarero.apellido2}">Pepóin Gálvez Ridruejo</span></p>
+	<p>Estado: <span th:text="${pedido.estado}">CANCELADO</span></p>
+		
+	<hr>
+		
+	<table>
+		<tr>
+			<th>Producto</th>
+			<th>Cantidad</th>
+			<th>Precio</th>
+		</tr>
+		<tr th:each="lineaPedido : ${pedido.lineas}">
+			<td th:text="${lineaPedido.producto.nombre}"></td>
+			<td th:text="${lineaPedido.cantidad}"></td>
+			<td th:text="${lineaPedido.precio}"></td>
+		</tr>
+	</table>
+		
+</body>
+</html>

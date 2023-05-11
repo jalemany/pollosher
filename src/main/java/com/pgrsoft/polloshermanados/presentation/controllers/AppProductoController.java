@@ -17,7 +17,7 @@ public class AppProductoController {
 	private ProductoServices productoServices;
 	
 	@GetMapping("/app/productos")
-	public String getPaginaCategorias(Model model) {
+	public String getPaginaProductos(Model model) {
 		
 		List<Producto> productos = productoServices.getAll();  // MODELO
 		model.addAttribute("productos", productos);

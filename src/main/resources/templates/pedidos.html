@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Pollos Hermanados</title>
+</head>
+<body>
+	<h1>Lista de Pedidos</h1>
+	<table>
+		<tr>
+			<th>Código</th>
+			<th>Fecha</th>
+			<th>Hora</th>
+			<th>DNI Camarero</th>
+			<th>Estado</th>
+			<th>Establecimiento</th>
+			<th>DNI Cliente</th>
+		</tr>
+		<tr th:each="pedido: ${pedidos}">
+			<td><a th:text="${pedido.codigo}" th:href="@{'?codigo=' + ${pedido.codigo}}">2993</a></td>
+			<td th:text="${#dates.format(pedido.fecha,'dd/MM/yyyy')}">23/10/2010</td>
+			<td th:text="${#dates.format(pedido.fecha,'HH:mm')}">09:34</td>
+			<td th:text="${pedido.camarero.nombre + ' ' + pedido.camarero.apellido1 + ' ' + pedido.camarero.apellido2}">Pepín Gálvez Ridruejo</td>
+			<td th:text="${pedido.estado}">CANCELADO</td>
+			<td th:text="${pedido.establecimiento.nombreComercial}">La Vaguada</td>
+			<td th:text="${pedido.cliente != null ? pedido.cliente.DNI : ''}">42776125R</td>
+		</tr>
+	</table>
+</body>
+</html>
