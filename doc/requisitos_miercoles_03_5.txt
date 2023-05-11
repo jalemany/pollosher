@@ -1,0 +1,16 @@
+Crear modelo objetos/relacional para Establecimiento (introducir datos de ejemplo)
+
+Los atributos:
+
+1.- codigo
+2.- nombre comercial
+3.- datos de contacto (email, movil, teléfono)
+4.- direccion (direccion, poblacion, provincia, código postal, país)
+5.- fecha inauguración
+6.- fecha cierre
+7.- Horario de apertura (@Transient si hay dificultad)
+8.- Horario de cierre (@Transient si hay dificultad)
+
+
+
+Modificar el modelo Pedido para que contemple el establecimiento (cada pedido estará asociado a un establecimiento) 
