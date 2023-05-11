@@ -11,7 +11,10 @@
 			<th>Código</th>
 			<th>Nombre</th>
 		</tr>
-		<!-- AQUI EL CONTENIDO DINAMICO -->
+		<tr th:each="categoria: ${categorias}">
+			<td th:text="${categoria.codigo}">8</td>
+			<td th:text="${categoria.nombre}">REFRESCO</td>
+		</tr>
 	</table>
 </body>
 </html>

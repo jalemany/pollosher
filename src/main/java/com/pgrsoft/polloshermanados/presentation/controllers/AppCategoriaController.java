@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.pgrsoft.polloshermanados.business.model.Categoria;
@@ -16,12 +17,12 @@ public class AppCategoriaController {
 	private CategoriaServices categoriaServices;
 	
 	@GetMapping("/app/categorias")
-	public String getPaginaCategorias() {
+	public String getPaginaCategorias(Model model) {
 		
-		List<Categoria> categorias = categoriaServices.getAll();
+		List<Categoria> categorias = categoriaServices.getAll();  // MODELO
 		
-		System.out.println(categorias);
-	
+		model.addAttribute("juju", categorias);
+		
 		return "categorias";
 	}
 	
