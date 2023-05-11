@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Pollos Hermanados</title>
+</head>
+<body>
+	<h1>Lista de Productos</h1>
+	<table>
+		<tr>
+			<th>Código</th>
+			<th>Nombre</th>
+			<th>Precio</th>
+			<th>Categoria</th>
+			<th>Fecha de Alta</th>
+			<th>Descatalogado</th>
+		</tr>
+		<tr th:each="producto: ${productos}">
+			<td th:text="${producto.codigo}">8</td>
+			<td th:text="${producto.nombre}">Cocacola Zero</td>
+			<td th:text="${producto.precio}">4.2</td>
+			<td th:text="${producto.categoria.nombre}">REFRESCO</td>
+			
+		<!--<td th:text="${producto.fechaAlta}">23/10/2010</td>-->
+		
+			<td th:text="${#dates.format(producto.fechaAlta, 'dd/MM/yyyy')}">23/10/2010</td>
+			
+		<!--<td th:text="${producto.descatalogado ? 'DESCATALOGADO' : ''}">false</td>-->
+		
+			<td>
+				<span style="color:red;" th:if="${producto.descatalogado}">
+					DESCATALOGADO!
+				</span>
+			</td>
+			
+		</tr>
+	</table>
+</body>
+</html>

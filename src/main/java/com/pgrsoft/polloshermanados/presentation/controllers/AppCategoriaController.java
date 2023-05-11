@@ -21,7 +21,7 @@ public class AppCategoriaController {
 		
 		List<Categoria> categorias = categoriaServices.getAll();  // MODELO
 		
-		model.addAttribute("juju", categorias);
+		model.addAttribute("categorias", categorias);
 		
 		return "categorias";
 	}
