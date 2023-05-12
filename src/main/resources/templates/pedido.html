@@ -7,7 +7,7 @@
 <body>
 	<h1 th:text="'Pedido ' + ${pedido.codigo}">Pedido 6561</h1>
 	
-	<p>Código: <span th:text="${pedido.codigo}">3455</span></p>
+	<p>Código: <span th:text="${pedido.codigo}">6561</span></p>
 	<p>Fecha: <span th:text="${#dates.format(pedido.fecha,'dd/MM/yyyy')}">12/03/2020</span></p>
 	<p>Hora: <span th:text="${#dates.format(pedido.fecha,'HH:mm')}">09:54</span></p>
 	<p>Camarero: <span th:text="${pedido.camarero.nombre + ' ' + pedido.camarero.apellido1 + ' ' + pedido.camarero.apellido2}">Pepóin Gálvez Ridruejo</span></p>

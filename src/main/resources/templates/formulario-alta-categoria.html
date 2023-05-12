@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Pollos Hermanados</title>
+</head>
+<body>
+	<h1>Formulario Alta Categoria</h1>
+	<form action="#" th:action="@{/app/crear-categoria}" method="post" th:object="${categoria}">
+	
+        <label>Nombre</label>
+        <input type="text" th:field="*{nombre}" />
+        <br>
+     
+        <button type="submit">Crear</button>    
+    </form>
+
+</body>
+</html>
