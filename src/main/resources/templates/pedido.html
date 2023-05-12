@@ -14,7 +14,7 @@
 	<!-- 3.- DNI del camarero -->
 	<!-- 4.- Marcar con aterisco las lineas de pedido en las que el precio difiere del precio "en tarifa" (OPCIONAL -->
 	
-	<h1 th:text="'Pedido ' + ${pedido.codigo}">Pedido 6561</h1>
+	<h2 th:text="'Pedido ' + ${pedido.codigo}">Pedido 6561</h2>
 	
 	<p>Código: <span th:text="${pedido.codigo}">6561</span></p>
 	<p>Fecha: <span th:text="${#dates.format(pedido.fecha,'dd/MM/yyyy')}">12/03/2020</span></p>

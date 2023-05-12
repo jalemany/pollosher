@@ -5,13 +5,13 @@
     <title>Pollos Hermanados</title>
 </head>
 <body>
-	<h1>Estadísticas Productos</h1>
+	<h2>Estadísticas Productos</h2>
 	
-	<h2>Númeo total productos</h2>
+	<h3>Númeo total productos</h3>
 	
 	<p>Número total de productos: <span th:text="${numeroTotalProductos}">98</span></p>
 	
-	<h2>Número total de productos por categoría</h2>
+	<h3>Número total de productos por categoría</h3>
 	
 	<table>
 		<tr th:each="entry : ${estadistica1}">
@@ -20,7 +20,7 @@
 		</tr>
 	</table>
 	
-	<h2>Precio medio de productos por categoría</h2>
+	<h3>Precio medio de productos por categoría</h3>
 	
 	<table>
 		<tr th:each="entry : ${estadistica2}">

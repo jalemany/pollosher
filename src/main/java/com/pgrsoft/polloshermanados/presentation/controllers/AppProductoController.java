@@ -30,8 +30,6 @@ public class AppProductoController {
 	@GetMapping("/productos/estadisticas")
 	public String getEstadisticasProductos(Model model) {
 		
-		// TODO 2
-		
 		Map<Categoria, Integer> estadistica1 = productoServices.getEstadisticaNumeroProductosGroupByCategoria();
 		Map<Categoria, Double> estadistica2 = productoServices.getEstadisticaPrecioMedioProductosGroupByCategoria();
 		int numeroTotalProductos = productoServices.getNumeroTotalProductos();
