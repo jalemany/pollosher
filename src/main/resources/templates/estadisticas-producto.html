@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Pollos Hermanados</title>
+</head>
+<body>
+	<h1>Estadísticas Productos</h1>
+	
+	<h2>Númeo total productos</h2>
+	
+	<p>Número total de productos: <span th:text="${numeroTotalProductos}">98</span></p>
+	
+	<h2>Número total de productos por categoría</h2>
+	
+	<table>
+		<tr th:each="entry : ${estadistica1}">
+    		<td th:text="${entry.key.nombre}">BEBIDAS</td>
+    		<td style="text-align:right;" th:text="${entry.value}">17</td>
+		</tr>
+	</table>
+	
+	<h2>Precio medio de productos por categoría</h2>
+	
+	<table>
+		<tr th:each="entry : ${estadistica2}">
+    		<td th:text="${entry.key.nombre}">BEBIDAS</td>
+    		<td style="text-align:right;">
+    			<span th:if="${entry.value != null}" th:text="${#numbers.formatDecimal(entry.value, 0, 'POINT', 2, 'COMMA')}">7.21</span>
+    			<span th:if="${entry.value == null}">---</span>
+    		</td>   
+		</tr>
+	</table>
+</body>
+</html>
+
+

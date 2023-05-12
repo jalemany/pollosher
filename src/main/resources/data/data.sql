@@ -94,7 +94,7 @@ INSERT INTO PRODUCTOS (CODIGO, NOMBRE, DESCRIPCION, FECHA_ALTA, PRECIO, DESCATAL
 (131,'Copa de Brandy Torres 5', 'Copita de Brandy Torres 5', '2017-10-21', 3.8, FALSE, 1),
 (132,'Copa de Brandy Torres 10', 'Copita de Brandy Torrres 10', '2017-10-24', 4.5, FALSE, 1),
 (133,'Chupito de Ballantines', 'Chupito de Ballantines', '2017-10-23', 3.8, FALSE, 1),
-(134,'Copa de Ballantines con hielo', 'Copa de Ballantines con hielo', '2017-10-25', 4.9, FALSE, 1),
+(134,'Copa de Ballantines con hielo', 'Copa de Ballantines con hielo', '2017-10-25', 1245664.67, FALSE, 1),
 (135,'Cubalibre de Baccardi', 'Cubalibre de Ron Baccardi', '2017-10-23', 4.7, FALSE, 1),
 (136,'Gaseosa Casera 33cl', 'Gaseosa Casera 33cl', '2017-10-25', 1.7, TRUE, 1),
 (137,'Agua Viladrau 33cl', 'Botellín de Agua de Viladray 33cl', '2017-10-27', 1.2, FALSE, 7),
