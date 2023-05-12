@@ -18,9 +18,7 @@ public class PedidoController {
 
 	@Autowired
 	private PedidoServices pedidoServices;
-	
-	// http://localhost:8080/pedidos
-	// http://localhost:8080/pedidos?dni=34822899R	
+
 	@GetMapping("/pedidos")
 	public List<Pedido> getPedidos(@RequestParam(name ="dni", required = false) String dni){
 		
