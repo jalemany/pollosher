@@ -22,11 +22,8 @@ public class AppCategoriaController {
 	
 	@GetMapping("/categorias")
 	public String getPaginaCategorias(Model model) {
-		
 		List<Categoria> categorias = categoriaServices.getAll();  // MODELO
-		
 		model.addAttribute("categorias", categorias);
-		
 		return "categorias";
 	}
 	
@@ -38,8 +35,7 @@ public class AppCategoriaController {
 	
 	@PostMapping("/crear-categoria")
 	public String submitForm(@ModelAttribute("categoria") Categoria categoria) {
-	    Categoria createdCatgoria = categoriaServices.create(categoria);
-	    System.out.println(createdCatgoria);
+	    categoriaServices.create(categoria);
 	    return "redirect:/app/categorias";
 	}
 

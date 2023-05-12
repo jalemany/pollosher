@@ -12,7 +12,6 @@ http://localhost:8080/pedidos
 
 
 
-
 - pruebas del EntityManager (JPA)
 
 http://localhost:8080/em/trigger1

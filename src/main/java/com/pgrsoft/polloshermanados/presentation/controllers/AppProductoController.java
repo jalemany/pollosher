@@ -24,5 +24,21 @@ public class AppProductoController {
 		model.addAttribute("productos", productos);
 		return "productos";
 	}
+	
+	@GetMapping("/productos/estadisticas")
+	public String getEstadisticasProductos() {
+		
+		// TODO 2
+		
+		// Devolvemos una página de estadísticas de productos que incluye:
+		
+		// 1.- Número total de productos
+		// 2.- Número total de productos para cada categoria (tabla)
+		// 3.- Precop medio de productos para cada catgoria (tabla)
+		
+		// Tenemos que llamar a la lógica de negocio, enviar el modelo a la vita y crear la vista...
+		
+		return null;
+	}
 
 }

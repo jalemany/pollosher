@@ -77,8 +77,24 @@ public class ProductoServicesImpl implements ProductoServices{
 
 	@Override
 	public Map<Categoria, Double> getEstadisticaPrecioMedioProductosGroupByCategoria() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Object[]> resultados = productoRepository.getEstadisticaPrecioMedioProductos();
+		
+		Map<Categoria, Double> mapaResultados = new HashMap<>();
+		
+		List<Categoria> categorias = categoriaRepository.findAll();
+		
+		for(Categoria categoria: categorias) {
+			mapaResultados.put(categoria, null);
+		}
+		
+		for(Object[] fila : resultados) {
+			Categoria categoria = (Categoria) fila[0];
+			Double numeroProductos = (Double) fila[1];
+			mapaResultados.replace(categoria, numeroProductos);
+		}
+		
+		return mapaResultados;
 	}
 
 	@Override
