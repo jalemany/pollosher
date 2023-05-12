@@ -26,6 +26,7 @@ public class AppPedidosController {
 			model.addAttribute("pedidos", pedidoServices.getAll());
 			return "pedidos";
 		} else {
+			// TODO 1 Completar el html
 			model.addAttribute("pedido", pedidoServices.read(codigo));
 			return "pedido";
 		}
